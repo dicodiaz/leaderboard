@@ -1,59 +1,51 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Leaderboard
 
-> One paragraph statement about the project.
+The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external [Leaderboard API service](https://www.notion.so/microverse/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3). This project is built using HTML, Boostrap, JavaScript and Webpack.
+
+## Mobile
 
 ![screenshot](./app_screenshot.png)
 
-Additional description about the project and its features.
+## Desktop
+
+![screenshot](./app_screenshot-2.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- HTML
+- Bootsrap
+- JavaScript
+- Webpack
+- VSCode
+- Gitflow & GitHub
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
+To get this project up and running, follow these simple steps:
 
-
-To get a local copy up and running follow these simple example steps.
+1. Clone the repository into your machine.
+2. Open the project's folder with your preferred editor.
+3. Run `npm install`.
+4. Run `npm start`.
 
 ### Prerequisites
 
+- Any modern web browser.
+- Any source-code editor (VSCode recommended).
+
 ### Setup
 
-### Install
-
-### Usage
-
-### Run tests
-
-### Deployment
-
-
+Follow the steps described before.
 
 ## Authors
 
-👤 **Author1**
+👤 **Dico Diaz Dussan**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
-
-👤 **Author2**
-
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@dicodiaz](https://github.com/dicodiaz)
+- Twitter: [@DicoDiaz1](https://twitter.com/DicoDiaz1)
+- LinkedIn: [Dico Diaz Dussan](https://www.linkedin.com/in/dico-diaz-dussan-476106a6/)
 
 ## 🤝 Contributing
 
@@ -69,7 +61,8 @@ Give a ⭐️ if you like this project!
 
 - Hat tip to anyone whose code was used
 - Inspiration
-- etc
+- Microverse program
+- My code reviewers
 
 ## 📝 License
 
