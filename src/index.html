@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container-md">
+        <h1>Leaderboard</h1>
+        <div class="row mx-0">
+          <section id="recent" class="col-6">
+            <span class="h2">Recent scores</span>
+            <button type="button" class="btn btn-primary">Refresh</button>
+            <table class="table table-striped">
+              <tbody id="result-list"></tbody>
+            </table>
+          </section>
+          <section id="add" class="col-6">
+            <h2>Add your score</h2>
+            <form action="/" method="GET" class="">
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                class="form-control mb-2"
+                required
+              />
+              <input
+                type="number"
+                id="score"
+                name="score"
+                placeholder="Your score"
+                class="form-control mb-2"
+                required
+              />
+              <div class="d-flex justify-content-end">
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
