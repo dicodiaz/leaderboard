@@ -18,33 +18,31 @@
         <div class="row mx-0">
           <section id="recent" class="col-6">
             <span class="h2">Recent scores</span>
-            <button type="button" class="btn btn-primary">Refresh</button>
+            <button id="refresh-btn" type="button" class="btn btn-primary">Refresh</button>
             <table class="table table-striped">
               <tbody id="result-list"></tbody>
             </table>
+            <div id="refresh-msg" class="text-center d-none opacity-0"></div>
           </section>
           <section id="add" class="col-6">
             <h2>Add your score</h2>
             <form action="/" method="GET" class="">
               <input
                 type="text"
-                id="name"
-                name="name"
-                placeholder="Your name"
+                id="name-input"
+                placeholder="Your name*"
                 class="form-control mb-2"
-                required
               />
               <input
                 type="number"
-                id="score"
-                name="score"
-                placeholder="Your score"
+                id="score-input"
+                placeholder="Your score*"
                 class="form-control mb-2"
-                required
               />
               <div class="d-flex justify-content-end">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button id="submit-btn" type="button" class="btn btn-primary">Submit</button>
               </div>
+              <div id="submit-msg" class="text-center d-none opacity-0"></div>
             </form>
           </section>
         </div>

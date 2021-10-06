@@ -1,29 +1,47 @@
 import DomManager from './DomManager.js';
-import Result from './Result.js';
+import Leaderboard from './Leaderboard.js';
 import ResultManager from './ResultManager.js';
 import './style.css';
 
-const [result1, result2, result3, result4, result5, result6, result7] = [
-  new Result({ user: 'Dico', score: 100 }),
-  new Result({ user: 'Peter', score: 110 }),
-  new Result({ user: 'Mark', score: 90 }),
-  new Result({ user: 'Tony', score: 120 }),
-  new Result({ user: 'Roger', score: 80 }),
-  new Result({ user: 'Steve', score: 130 }),
-  new Result({ user: 'Stan', score: 70 }),
-];
 const resultManager = new ResultManager();
 const domManager = new DomManager();
-const resultListContainer = document.querySelector('#result-list');
+const leaderboard = new Leaderboard();
+const resultList = document.querySelector('#result-list');
+const refreshBtn = document.querySelector('#refresh-btn');
+const refreshMsg = document.querySelector('#refresh-msg');
+const nameInput = document.querySelector('#name-input');
+const scoreInput = document.querySelector('#score-input');
+const submitBtn = document.querySelector('#submit-btn');
+const submitMsg = document.querySelector('#submit-msg');
 
 window.onload = () => {
-  resultManager
-    .addResult(result1)
-    .addResult(result2)
-    .addResult(result3)
-    .addResult(result4)
-    .addResult(result5)
-    .addResult(result6)
-    .addResult(result7);
-  domManager.populateAll(resultManager.results, resultListContainer);
+  leaderboard.getResults().then((data) => {
+    resultManager.addResultsFromAPI(data.result);
+    domManager.appendAllResults(resultManager.results, resultList);
+  });
+
+  refreshBtn.addEventListener('click', () => {
+    leaderboard.getResults().then((data) => {
+      resultManager.clearResults().addResultsFromAPI(data.result);
+      domManager
+        .removeAllResults(resultList)
+        .appendAllResults(resultManager.results, resultList)
+        .displayMsg('Refresh successful', refreshMsg, 'text-success');
+    });
+  });
+
+  submitBtn.addEventListener('click', () => {
+    const name = nameInput.value;
+    const score = scoreInput.value;
+    if (name === '' || score === '') {
+      domManager.displayMsg('Please fill every field before submitting', submitMsg, 'text-danger');
+    } else {
+      const obj = { user: name, score };
+      leaderboard.postResult(obj).then((data) => {
+        nameInput.value = '';
+        scoreInput.value = '';
+        domManager.displayMsg(data.result, submitMsg, 'text-success');
+      });
+    }
+  });
 };
