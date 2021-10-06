@@ -3,13 +3,13 @@ export default class Leaderboard {
 
   #GAME_ID = '6RWYo73TvPoVLbLnw9Tv';
 
-  async getResults() {
+  getResults = async () => {
     const url = `${this.#BASE_URL}games/${this.#GAME_ID}/scores/`;
     const response = await fetch(url);
     return response.json();
-  }
+  };
 
-  async postResult(data) {
+  postResult = async (data) => {
     const url = `${this.#BASE_URL}games/${this.#GAME_ID}/scores/`;
     const response = await fetch(url, {
       method: 'POST',
@@ -19,5 +19,5 @@ export default class Leaderboard {
       body: JSON.stringify(data),
     });
     return response.json();
-  }
+  };
 }

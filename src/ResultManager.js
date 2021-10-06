@@ -5,18 +5,18 @@ export default class ResultManager {
     this.results = results;
   }
 
-  addResult(result = {}) {
+  addResult = (result = {}) => {
     this.results.push(result);
     return this;
-  }
+  };
 
-  addResultsFromAPI(results = []) {
+  addResultsFromAPI = (results = []) => {
     results.forEach((result) => this.addResult(new Result(result)));
     return this;
-  }
+  };
 
-  clearResults() {
+  clearResults = () => {
     this.results = [];
     return this;
-  }
+  };
 }

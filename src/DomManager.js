@@ -1,5 +1,5 @@
 export default class DomManager {
-  appendResult(result, container) {
+  appendResult = (result, container) => {
     const tr = document.createElement('tr');
     const td = document.createElement('td');
 
@@ -8,19 +8,19 @@ export default class DomManager {
     container.appendChild(tr);
 
     return this;
-  }
+  };
 
-  appendAllResults(results, container) {
+  appendAllResults = (results, container) => {
     results.forEach((result) => this.appendResult(result, container));
     return this;
-  }
+  };
 
-  removeAllResults(container) {
+  removeAllResults = (container) => {
     container.innerHTML = '';
     return this;
-  }
+  };
 
-  displayMsg(message, container, optClass = null) {
+  displayMsg = (message, container, optClass = null) => {
     if (optClass) container.classList.add(optClass);
     container.innerText = message;
     container.classList.remove('d-none');
@@ -32,5 +32,5 @@ export default class DomManager {
       if (optClass) container.classList.remove(optClass);
     }, 3000);
     return this;
-  }
+  };
 }
