@@ -20,17 +20,18 @@ export default class DomManager {
     return this;
   };
 
-  displayMsg = (message, container, optClass = null) => {
+  displayMsg = async (message, container, optClass = null) => {
     if (optClass) container.classList.add(optClass);
     container.innerText = message;
-    container.classList.remove('d-none');
-    setTimeout(() => container.classList.remove('opacity-0'), 0);
-    setTimeout(() => container.classList.add('opacity-0'), 2000);
-    setTimeout(() => {
-      container.classList.add('d-none');
-      container.innerText = '';
-      if (optClass) container.classList.remove(optClass);
-    }, 3000);
+    container.classList.remove('opacity-0');
+    await this.delay(1000);
+    container.classList.add('opacity-0');
+    await this.delay(1000);
+    if (optClass) container.classList.remove(optClass);
     return this;
   };
+
+  delay(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
 }

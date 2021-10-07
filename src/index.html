@@ -12,21 +12,13 @@
     />
   </head>
   <body>
-    <main>
+    <main class="min-vh-100 d-flex flex-column justify-content-center">
       <div class="container-md">
-        <h1>Leaderboard</h1>
-        <div class="row mx-0">
-          <section id="recent" class="col-6">
-            <span class="h2">Recent scores</span>
-            <button id="refresh-btn" type="button" class="btn btn-primary">Refresh</button>
-            <table class="table table-striped">
-              <tbody id="result-list"></tbody>
-            </table>
-            <div id="refresh-msg" class="text-center d-none opacity-0"></div>
-          </section>
-          <section id="add" class="col-6">
-            <h2>Add your score</h2>
-            <form action="/" method="GET" class="">
+        <h1 class="text-center display-2 mb-5">Leaderboard</h1>
+        <div class="row row-cols-md-2">
+          <section id="add" class="order-md-last">
+            <h2 class="text-center">Add your score</h2>
+            <form action="/" method="GET" class="mb-2">
               <input
                 type="text"
                 id="name-input"
@@ -42,8 +34,20 @@
               <div class="d-flex justify-content-end">
                 <button id="submit-btn" type="button" class="btn btn-primary">Submit</button>
               </div>
-              <div id="submit-msg" class="text-center d-none opacity-0"></div>
             </form>
+            <div id="submit-msg" class="text-center opacity-0 mb-4 mb-md-0">Dummy text</div>
+          </section>
+          <section id="recent">
+            <div class="row row-cols-auto g-0 mb-2 justify-content-between">
+              <h2 class="mb-md-0">Recent scores</h2>
+              <div>
+                <button id="refresh-btn" type="button" class="btn btn-primary">Refresh</button>
+              </div>
+            </div>
+            <table class="table table-striped">
+              <tbody id="result-list"></tbody>
+            </table>
+            <div id="refresh-msg" class="text-center opacity-0">Dummy text</div>
           </section>
         </div>
       </div>
