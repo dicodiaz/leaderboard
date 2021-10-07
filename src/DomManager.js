@@ -31,7 +31,5 @@ export default class DomManager {
     return this;
   };
 
-  delay(ms) {
-    return new Promise((resolve) => setTimeout(resolve, ms));
-  }
+  delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 }
