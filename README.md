@@ -2,7 +2,7 @@
 
 # Leaderboard
 
-The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external [Leaderboard API service](https://www.notion.so/microverse/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3). This project is built using HTML, Boostrap, JavaScript and Webpack.
+> The leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external [Leaderboard API service](https://www.notion.so/microverse/Leaderboard-API-service-24c0c3c116974ac49488d4eb0267ade3). This project is built using HTML, Boostrap, JavaScript and Webpack.
 
 ## Mobile
 
@@ -21,12 +21,16 @@ The leaderboard website displays scores submitted by different players. It also 
 - VSCode
 - Gitflow & GitHub
 
+## Live Demo
+
+[Live Demo Link](http://dicodiaz.me/leaderboard/dist/)
+
 ## Getting Started
 
 To get this project up and running, follow these simple steps:
 
 1. Clone the repository into your machine.
-2. Open the project's folder with your preferred editor.
+2. Open the project's folder with your preferred source-code editor.
 3. Run `npm install`.
 4. Run `npm start`.
 
