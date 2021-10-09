@@ -16,13 +16,13 @@ const submitMsg = document.querySelector('#submit-msg');
 
 window.onload = () => {
   leaderboard.getResults().then((data) => {
-    resultManager.addResultsFromAPI(data.result);
+    resultManager.addAllResults(data.result);
     domManager.appendAllResults(resultManager.results, resultList);
   });
 
   refreshBtn.addEventListener('click', () => {
     leaderboard.getResults().then((data) => {
-      resultManager.clearResults().addResultsFromAPI(data.result);
+      resultManager.clearResults().addAllResults(data.result);
       domManager
         .removeAllResults(resultList)
         .appendAllResults(resultManager.results, resultList)

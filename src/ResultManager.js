@@ -6,12 +6,12 @@ export default class ResultManager {
   }
 
   addResult = (result = {}) => {
-    this.results.push(result);
+    this.results.push(new Result(result));
     return this;
   };
 
-  addResultsFromAPI = (results = []) => {
-    results.forEach((result) => this.addResult(new Result(result)));
+  addAllResults = (results = []) => {
+    results.forEach((result) => this.addResult(result));
     return this;
   };
 
